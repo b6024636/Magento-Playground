@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @var \Clarity\Sidebar\Block\Display $block
+ */
+
+?>
+
+<?php if($block->isActive()): ?>
+<div class="sidebar custom-sidebar position-sticky top50 d-flex flex-row">
+    <div class="sidebar-content position-absolute ease-in-out-200 bg-grey light-boxshadow p-5">
+        <p><?= $block->displayText(); ?></p>
+    </div>
+    <div class="position-absolute left0 sidebar-button ease-in-out-200">
+        <a class="vertical-text p-3 background-lightblue font-weight-bold text-white border border-dark">
+            <?= $block->sayHello(); ?>
+        </a>
+    </div>
+</div>
+
+
+
+<script>
+    // require([
+    //     "jquery",
+    //     'Magento_Ui/js/modal/alert',
+    //     "jquery/ui",
+    //     "Clarity_Sidebar/js/clarity_sidebar"
+    // ], function ($, alert) {
+    //     'use strict';
+    //     $('[data-role=example]').sidebar();
+    //
+    //     // $('.custom-sidebar').click(function(){
+    //     //     $(this).toggleClass('show');
+    //     //     $(this).toggleClass('light-boxshadow');
+    //     //     // $(this).toggleClass('justify-content-between');
+    //     //     $(this).find('.sidebar-button').toggleClass('left0');
+    //     //     $(this).find('.sidebar-button').toggleClass('position-absolute');
+    //     //     $(this).find('.sidebar-button').toggleClass('position-relative');
+    //     //     $(this).find('.sidebar-content').toggleClass('position-absolute');
+    //     //     $(this).find('.sidebar-content').toggleClass('position-relative');
+    //     // });
+    //
+    // });
+</script>
+<?php endif; ?>

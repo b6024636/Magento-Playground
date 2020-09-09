@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="clarity.sidebar" as="clarity-sidebar" label="Clarity Sidebar" htmlTag="div" htmlClass="your-class sidebar position-fixed top50" htmlId="clarity-sidebar" before="main.content">
+                <block class="Clarity\Sidebar\Block\Display" name="clarity_sidebar" template="Clarity_Sidebar::sidebar.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
